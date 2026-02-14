@@ -9,6 +9,9 @@ export default function RandomQuote(){
     useEffect(() => {
         const fetchQuote = async () => {
             try {
+    
+                console.log("API KEY:", import.meta.env.VITE_API_KEY);
+    
                 const response = await fetch(
                     "https://api.api-ninjas.com/v2/quotes?categories=success,wisdom",
                     {
@@ -17,16 +20,21 @@ export default function RandomQuote(){
                         }
                     }
                 );
-
+    
+                if (!response.ok) {
+                    const text = await response.text();
+                }
+    
                 const data = await response.json();
                 setQuote(data[0]);
+    
             } catch (error) {
                 console.error("Error fetching quote:", error);
             } finally {
                 setLoading(false);
             }
         };
-
+    
         fetchQuote();
     }, []);
 
