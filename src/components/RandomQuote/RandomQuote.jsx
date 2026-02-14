@@ -13,7 +13,7 @@ export default function RandomQuote(){
                     "https://api.api-ninjas.com/v2/quotes?categories=success,wisdom",
                     {
                         headers: {
-                            "X-Api-Key": ""
+                            "X-Api-Key": import.meta.env.VITE_API_KEY
                         }
                     }
                 );
