@@ -1,0 +1,100 @@
+.td-lists-elements{
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 1px white;
+    border-radius: 15px;
+    margin-bottom: .3rem;
+    padding: .75rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.todo-header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.todo-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form: centered block with consistent width */
+.todo-form{
+    display: flex;
+    gap: .5rem;
+    width: min(90%, 520px);
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Input fills available space nicely */
+.todo-input{
+    flex: 1;
+    min-width: 0;
+    padding: .4rem .6rem;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+}
+
+/* Button stays compact */
+.todo-button{
+    padding: .4rem .8rem;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+}
+
+/* List: centered column block like expenses */
+.todo-list {
+    width: min(90%, 520px);
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem auto 0 auto;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+/* Each row: stable alignment */
+.todo-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .45rem .75rem;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+/* Text takes space on the left */
+.todo-text{
+    flex: 1;
+    text-align: left;
+}
+
+/* Trash pinned right */
+.list-delete-btn{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+    margin-left: .5rem;
+}

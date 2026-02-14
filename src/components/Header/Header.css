@@ -1,0 +1,15 @@
+.header-elements{
+    border-radius: 15px;
+    margin-bottom: .5rem;
+    padding: .5rem;
+}
+
+.header-elements h1{
+    font-weight: 900;
+}
+
+.header-elements h2{
+    font-weight: 600;
+    font-style: italic;
+    
+}

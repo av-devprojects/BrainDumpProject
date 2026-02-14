@@ -1,0 +1,109 @@
+.add-expense-elements{
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 1px white;
+    border-radius: 15px;
+    margin-bottom: .5rem;
+    padding: .75rem;
+}
+
+/* Header */
+.add-expense-header{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* you only have an h3, so center it */
+    margin-bottom: 1rem;
+}
+
+.add-expense-elements h3{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form */
+.add-expense{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* Inputs + submit centered consistently */
+.expense-value,
+.expense-description,
+.expense-submit{
+    width: min(70%, 420px); /* keeps it centered + prevents giant width on big screens */
+    margin: 0;
+    padding: .4rem .6rem;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+}
+
+/* Registered section */
+.expenses-registered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;            /* let it fill the card */
+    margin-top: 2rem;
+}
+
+/* UL reset + centered layout */
+.expenses-table{
+    width: min(90%, 520px); /* makes the whole list a centered block */
+    list-style: none;
+    padding: 0;
+    margin: .5rem auto 0 auto;
+    box-sizing: border-box;
+}
+
+/* Each row: reliable alignment without huge fixed gaps */
+.expense-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .45rem .75rem;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    box-sizing: border-box;
+    margin-bottom: .4rem;
+}
+
+/* Description takes space on the left */
+.expense-item-desc{
+    flex: 1;
+    text-align: left;
+    margin-left: .8rem;
+}
+
+/* Amount sits near right */
+.expense-item-amount{
+    margin-left: .75rem;
+    white-space: nowrap;
+}
+
+/* Trash button pinned to far right */
+.expense-delete-btn{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: .5rem;
+    display: grid;
+    place-items: center;
+}
+
+/* See all button: truly centered */
+.see-all-btn{
+    width: min(50%, 220px);
+    margin: .75rem auto 0 auto; /* auto centers it */
+    padding: .4rem .6rem;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    display: block; /* makes margin auto reliable */
+}

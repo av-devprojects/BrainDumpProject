@@ -1,0 +1,87 @@
+.calendar-elements {
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 1px white;
+    border-radius: 15px;
+    margin-bottom: .5rem;
+    padding: .5rem;
+
+  }
+  
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .calendar-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .calendar-prev,
+  .calendar-next {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: .3rem;
+  }
+  
+  .calendar-dow {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  /* The day cells */
+  .calendar-cell {
+    height: 2.5rem;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    background: white;
+    cursor: pointer;
+  
+    display: grid;
+    place-items: center;
+  
+    font-size: 1rem;
+    line-height: 1;
+  }
+  
+  /* Days not in current month */
+  .calendar-cell.is-outside {
+    opacity: 0.35;
+  }
+  
+  /* Selected day */
+  .calendar-cell.is-selected {
+    background: #b4c08d;
+    color: white;
+    border-color: #111;
+  }
+  
+  /* Today highlight (not selected) */
+  .calendar-cell.is-today:not(.is-selected) {
+    border-color: #111;
+    font-weight: 700;
+  }
+  
+  /* Nice keyboard focus */
+  .calendar-cell:focus-visible {
+    outline: 3px solid rgba(0, 0, 0, 0.25);
+    outline-offset: 2px;
+  }
+  
+  .calendar-cell:hover {
+    transform: translateY(-1px);
+  }

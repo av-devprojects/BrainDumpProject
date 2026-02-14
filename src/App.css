@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(1deg,#262709 0%, #eefbc4 100%);
+}
+
+.elements-grid{
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 1fr; /* default = 1 column */
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .elements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1000px) {
+  .elements-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
